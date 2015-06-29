@@ -1,0 +1,37 @@
+#calendar-table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#calendar-table  th, #calendar-table  td {
+	border: 1px solid #98bf21;
+	padding: 5px;
+	text-align: center
+}
+
+#calendar-table  th {
+	background-color: #A7C942;
+	color: #fff;
+	
+}
+.weekname {
+	font-size: 80%;
+}
+
+.month-1, .month-3, .month-5, .month-7, .month-9, .month-11 {
+	background-color: #EAF2D3;
+}
+
+.month-2, .month-4, .month-6, .month-8, .month-10, .month-12 {
+	background-color: #FFFFFF;
+}
+
+#schedule-table {
+	border-collapse: collapse;
+	background-color: #fff;
+}
+#schedule-table, #schedule-table td {
+	border: 1px solid black;
+}
+
+

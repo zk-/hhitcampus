@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet" href="hhitcampus.css">
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.3.2.min.js"></script>
+	<script src="hhitcampus.js"></script>
+</head>
+<body>
+	<div data-role="page" id="calendar">
+		<div data-role="header" data-position="fixed">
+			<h1>淮工校园助手</h1>
+			<a href="#calendar-settings" data-role="button" data-icon="gear" class="ui-btn-right">设置</a>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#calendar" data-icon="grid" class="ui-btn-active ui-state-persist">院历</a></li>
+					<li><a href="#schedule" data-icon="gear">课程表</a></li>
+					<li><a href="#news" data-icon="info">新闻</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<table id="calendar-table">
+			  <tr>
+				<th colspan="2">月份|周次|星期</th><th>一</th><th>二</th><th>三</th><th>四</th>	<th>五</th><th>六</th><th>日</th>
+			  </tr>
+			</table>			
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>&copy; 2014 HHIT移动应用开发创新团队</h1>
+		</div>
+	</div>
+	<div data-role="page" id="calendar-settings">
+		<div data-role="header">
+			<h1>院历设置</h1>
+		</div>
+		<div data-role="content">
+			<form action="">
+				<label for="startDate">开学日期：</label>
+				<input type="date" id="startDate">
+				<label for="weeks">周数：</label>
+				<input type="number" id="weeks" value="20">
+				<label for="colorscheme">配色方案：</label>
+				<select name="colorscheme">
+					<option value="">配色方案1</option>
+					<option value="">配色方案2</option>
+					<option value="">配色方案3</option>
+					<option value="">配色方案4</option>
+					<option value="">配色方案5</option>
+				</select>
+				<input type="submit" value="保存">
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>&copy; 2014 HHIT移动应用开发创新团队</h1>
+		</div>
+	</div>
+	<div data-role="page" id="schedule">
+		<div data-role="header">
+			<h1>淮工校园助手</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#calendar" data-icon="grid">院历</a></li>
+					<li><a href="#schedule" data-icon="gear" class="ui-btn-active ui-state-persist">课程表</a></li>
+					<li><a href="#news" data-icon="info">新闻</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+<table id="schedule-table" >
+	<tbody><tr>
+		<td colspan="2" >时间</td><td >星期一</td><td >星期二</td><td >星期三</td><td >星期四</td><td >星期五</td>
+	</tr><tr>
+		<td colspan="2">早晨</td><td></td><td></td><td></td><td></td><td></td>
+	</tr><tr>
+		<td rowspan="5" >上午</td><td >第1节</td><td ></td><td rowspan="2" >电子商务技术概论<br>1-8(1,2)<br>张勇<br>B-202<br></td><td rowspan="2" >算法分析与设计A<br>9-16(1,2)<br>汪前进<br>Ⅲ-207<br><br><br>Web应用开发技术<br>1-8(1,2)<br>朱强<br>Ⅲ-207<br></td><td rowspan="2" >电子商务技术概论<br>1-8(1,2)<br>张勇<br>B-202<br></td><td rowspan="2" >虚拟现实技术<br>7(1,2)<br>曲毅<br>Ⅲ-206<br></td>
+	</tr><tr>
+		<td>第2节</td><td></td>
+	</tr><tr>
+		<td>第3节</td><td rowspan="2">虚拟现实技术<br>1-8(3,4)<br>曲毅<br>Ⅲ-207<br></td><td rowspan="2">数值分析B<br>1-2,4-12(3,4)<br>李存华<br>Ⅲ-307<br><font color="red">(停0030)</font><br></td><td rowspan="2">毛泽东思想和中国特色社会主义理论体系概论<br>1-16(3,4)<br>王珩<br>A-305<br></td><td rowspan="2">数值分析B<br>1-2,4-12(3,4)<br>李存华<br>Ⅲ-307<br><font color="red">(停0031)</font><br></td><td rowspan="2">虚拟现实技术<br>1-6,8(3,4)<br>曲毅<br>A-305<br><font color="red">(调0266)</font><br><br><br>算法分析与设计A<br>9-16(3,4)<br>汪前进<br>Ⅲ-207<br></td>
+	</tr><tr>
+		<td>第4节</td>
+	</tr><tr>
+		<td>第5节</td><td></td><td></td><td></td><td></td><td></td>
+	</tr><tr>
+		<td rowspan="5">下午</td><td>第6节</td><td rowspan="2">算法分析与设计A<br>9-16(6,7)<br>汪前进<br>Ⅲ-201录播室<br><br><br>Web应用开发技术<br>1-8(6,7)<br>朱强<br>Ⅲ-207<br></td><td rowspan="2">大型数据库概论<br>1-12(6,7)<br>周立东<br>A-104<br></td><td></td><td rowspan="2">大型数据库概论<br>1-12(6,7)<br>周立东<br>Ⅲ-206<br></td><td rowspan="2">毛泽东思想和中国特色社会主义理论体系概论<br>1-16(6,7)<br>王珩<br>A-305<br></td>
+	</tr><tr>
+		<td>第7节</td><td></td>
+	</tr><tr>
+		<td>第8节</td><td></td><td rowspan="2">J2EE环境与程序设计<br>9-16(8,9)<br>邢树斌<br>A-305<br></td><td></td><td rowspan="2">虚拟现实技术<br>1-8(8,9)<br>曲毅<br>A-305<br><br><br>J2EE环境与程序设计<br>9-16(8,9)<br>邢树斌<br>A-305<br></td><td rowspan="2">J2EE环境与程序设计<br>9-16(8,9)<br>邢树斌<br>A-305<br><br><br>Web应用开发技术<br>1-8(8,9)<br>朱强<br>Ⅲ-207<br></td>
+	</tr><tr>
+		<td>第9节</td><td></td><td></td>
+	</tr>
+</tbody></table>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>&copy; 2014 HHIT移动应用开发创新团队</h1>
+		</div>
+	</div>
+	<div data-role="page" id="news">
+		<div data-role="header">
+			<h1>校园新闻</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#calendar" data-icon="grid">院历</a></li>
+					<li><a href="#schedule" data-icon="gear">课程表</a></li>
+					<li><a href="#" data-icon="info"  class="ui-btn-active ui-state-persist">新闻</a></li>
+				</ul>
+			</div>			
+		</div>
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+					<a href="#">教学审核评估学习宣传材料</a>
+				</li>
+				<li>
+					<a href="#">计算机工程学院各专业培养目标与专业特色</a>
+				</li>
+				<li>
+					<a href="#">“丝绸之路经济带科技发展论坛”大数据及应用专题报...</a>
+				</li>
+				<li>
+					<a href="#">计算机工程学院试卷专项检查情况报告</a>
+				</li>
+				<li>
+					<a href="#">关于网考课程光盘中存档文件的要求</a>
+				</li>
+				<li>
+					<a href="#">关于做好2014年一、二年级学生转专业工作的通知</a>
+				</li>
+				<li>
+					<a href="#">关于公共课计分册整改的通知</a>
+				</li>
+				<li>
+					<a href="#">计算机工程学院召开“迎接审核评估，开展学风督查”...</a>
+				</li>
+				<li>
+					<a href="#">关于试卷自查自纠的再次通知</a>
+				</li>
+				<li>
+					<a href="#">填写 课程教学大纲修订情况统计表 的通知</a>
+				</li>
+				<li>
+					<a href="#">关于教案小结的填写建议</a>
+				</li>
+			</ul>		
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>&copy; 2014 HHIT移动应用开发创新团队</h1>
+		</div>
+	</div>
+</body>
+</html>
